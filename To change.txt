@@ -1,3 +1,8 @@
+<<<<<<< HEAD
 bank account number and ifsc
 location map
+=======
+bank account number and ifsc
+location map
+>>>>>>> e98aefa (Initial commit all files)
 kitchen pics
