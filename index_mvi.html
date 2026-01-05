@@ -78,6 +78,34 @@
 <a class="text-gray-700 hover:text-gray-600 px-3 py-2 font-medium" href="#contact">
         Contact
        </a>
+
+<!-- Other Properties Dropdown -->
+<div class="relative">
+  <button
+    id="otherPropertiesBtn"
+    class="text-gray-700 hover:text-gray-600 px-3 py-2 font-medium flex items-center gap-1"
+  >
+    Other Properties
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+         viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+
+  <div
+    id="otherPropertiesMenu"
+    class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border z-50"
+  >
+    <a
+      href="https://lowoodinn.netlify.app/"
+      target="_blank"
+      class="block px-4 py-3 text-gray-700 hover:bg-gray-100 font-medium"
+    >
+      Lowood Inn
+    </a>
+  </div>
+</div>
+
 <a class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-2 rounded-full font-medium transition duration-300" href="#book">
         Book Now
        </a>
@@ -1004,5 +1032,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-</script></body>
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("otherPropertiesBtn");
+  const menu = document.getElementById("otherPropertiesMenu");
+
+  if (btn && menu) {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      menu.classList.toggle("hidden");
+    });
+
+    document.addEventListener("click", function () {
+      menu.classList.add("hidden");
+    });
+  }
+});
+</script>
+
+</body>
 </html>
